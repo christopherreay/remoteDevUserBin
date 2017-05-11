@@ -1,0 +1,7 @@
+git add -A
+git status
+confirm "check diff? (y/N)" && git diff HEAD
+confirm "read log? (y/N)" && git log --pretty=format:"%h : %s"
+echo "git commit message:"
+read -p "  > " commitMessage
+git commit -m "$commitMessage"
